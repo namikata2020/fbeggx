@@ -1,7 +1,7 @@
-#FBEGGX  version 0.93
+# FBEGGX  version 0.93
 Easy and Gratifying Graphics library for frame buffer
 
-##はじめに
+## はじめに
 
 　FBEGGXは[EGGX / ProCALL](http://www.ir.isas.jaxa.jp/~cyamauch/eggx_procall/)互換のライブラリでLinuxのフレームバッファ上で動作するように
 作成しました．X11が動作しない環境でもグラフィックスプログラムを作成することができます。
@@ -105,7 +105,9 @@ int ggetinitialattributes( void );
 void gsetinitialbgcolor( const char *argsformat, ... );
 ```
 
-EGGX/ProCALL   [Webページ](http://www.ir.isas.jaxa.jp/~cyamauch/eggx_procall/) [github](https://github.com/cyamauch/eggx)
+
+EGGX/ProCALL   [Webページ](http://www.ir.isas.jaxa.jp/~cyamauch/eggx_procall/) 　　[github](https://github.com/cyamauch/eggx)
+
 wineggx [github](https://github.com/MasutaniLab/wineggx)
 
 
