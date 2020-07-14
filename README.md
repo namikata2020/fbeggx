@@ -7,9 +7,9 @@ Easy and Gratifying Graphics library for frame buffer
 作成しました．X11が動作しない環境でもグラフィックスプログラムを作成することができます。
 
 大きな違いは次の3点ですが，EGGX / ProCALLの一部の機能をサポートしていません．
--ウィンドウシステムが存在しないため，開けるウィンドウは1つだけです．
--フォントはTrueTypeフォントを使用します．そのためint newfontset( int wn, const char *fontfile)関数は引数にTrueTypeフォントそのものを指定します。
--マウスのサポートはありません．
+- ウィンドウシステムが存在しないため，開けるウィンドウは1つだけです．
+- フォントはTrueTypeフォントを使用します．そのためint newfontset( int wn, const char *fontfile) 関数は引数にTrueTypeフォントそのものを指定します。
+- マウスのサポートはありません．
 
 実装してある関数一覧
 ```
