@@ -15,23 +15,24 @@ Easy and Gratifying Graphics library for frame buffer
 
 ### TrueTypeフォントのインストールおよびlib/fbeggx.hファイルの編集
 
-文字の表示はtruetypeフォントを使用します．1つのTruetypeフォントとfreetypeライブラリをインストールします．debian ubuntu系では
+文字の表示はtruetypeフォントを使用します．1つのTruetypeフォントとfreetypeライブラリをインストールします．
+debian ubuntu系では，次のようにインストールします．
 ```
 $ sudo apt install fonts-ipafont
 $ sudo apt install libfreetype6-dev
 ```
 
-### /lib/fbeggx.hファイル中のDEFAULT_FONTの項目を書き換える．
+### ./lib/fbeggx.hファイル中のDEFAULT_FONTの書き換え
 ```
   /* デフォルトのフォントファイル　*/
   #define DEFAULT_FONT "/usr/share/fonts/truetype/fonts-japanese-gothic.ttf"
 ```
   フォントを指定しない場合のデフォルトのフォントとなります．
 
-### フレームバッファデバイスを指定するためのlib/fbeggx.hファイルの編集
+### フレームバッファデバイスを指定するための./lib/fbeggx.hファイルの編集
 
   　フレームバッファ・デバイスファイルは環境変数"FRAMEBUFFER"で指定することができます．
-   デフォルトで使用するフレームバッファ・デバイスファイルを変更したい場合はfbeggx.hを書き換えます。
+   デフォルトで使用するフレームバッファ・デバイスファイルを変更したい場合はfbeggx.hを書き換えます．
 ```
   /* デフォルトのレームバッファ デバイスファイル名 */
   #define DEFAULT_FRAMEBUFFER "/dev/fb0"
@@ -40,16 +41,15 @@ $ sudo apt install libfreetype6-dev
 
 ### Makefile を選んで編集
 
-    Makefileの IINC, LLIB を環境にあわせて変更してください．
+Makefileの IINC, LLIB を環境にあわせて変更してください．
 
-    Makefile の CC, USERCC, USERFC 等の部分を確認し，必要に応じて修正してくだ
-  さい．FBEGGX をビルドする時のコンパイラと，ユーザが使うコンパイラを別
-  々に指定できます．
+Makefile の CC, USERCC, USERFC 等の部分を確認し，必要に応じて修正してください．
+FBEGGX をビルドする時のコンパイラと，ユーザが使うコンパイラを別々に指定できます．
 
-    FBEGGXのライブラリファイル，ヘッダファイルはデフォルトでは /usr/local/lib/,
-  /usr/local/include/ にインストールする設定になっています．これは Makefile 
-  の PREFIX，INCDIR，LIBDIR，BINDIR で指定します(ほとんどの場合は，PREFIX の
-  変更だけで十分だと思います)．
+FBEGGXのライブラリファイル，ヘッダファイルはデフォルトでは /usr/local/lib/,
+/usr/local/include/ にインストールする設定になっています．これは Makefile 
+の PREFIX，INCDIR，LIBDIR，BINDIR で指定します(ほとんどの場合は，PREFIX の
+変更だけで十分だと思います)．
 
 
 ### make します．
@@ -58,41 +58,41 @@ $ sudo apt install libfreetype6-dev
 ```
 ### fbegg , fbeggx*.h と libfbeggx.a をコピーします．
 
-    root になれる場合，su で root になり，make install します．
-'''
+root になれる場合，su で root になり，make install します．
+```
       $ su
       $ make install
       あるいは
       $ sudo make install
-'''
+```
 
 
 ### 動作テスト
 
-    ターミナルから，次のようにしてください．
-'''
+ターミナルから，次のようにしてください．
+```
       $ ./sample
-'''
-  動作確認を兼ねたグラフィックスが表示されます．
+```
+動作確認を兼ねたグラフィックスが表示されます．
   
-  また，次のように実行すると
-  '''
+また，次のように実行すると
+```
       $ cd examples_tutorial
       $ make clock
       $ ./clock &
-  '''
+```
 
-  簡単なデジタル時計が現れれば，EGGX のビルドは成功です．
+簡単なデジタル時計が現れれば，EGGX のビルドは成功です．
 
-    さらに，基本的な日本語フォントが表示できるかを，次のようにテストします．
-'''
+さらに，基本的な日本語フォントが表示できるかを，次のようにテストします．
+```
       % cd examples.utf-8
       % make nihongo
       % ./nihongo
-'''
-  14，16，24ドットで文字列が表示されればOKです．
-    うまく表示されない場合は，truetypeフォントのインストールが不十分ですので
-  フォントをインストールしてください．
+```
+14，16，24ドットで文字列が表示されればOKです．
+うまく表示されない場合は，truetypeフォントのインストールが不十分ですので
+フォントをインストールしてください．
 
 
 
@@ -193,7 +193,7 @@ void gsetinitialbgcolor( const char *argsformat, ... );
 
 EGGX/ProCALL   [Webページ](http://www.ir.isas.jaxa.jp/~cyamauch/eggx_procall/) 　　[github](https://github.com/cyamauch/eggx)
 
-wineggx    [github](https://github.com/MasutaniLab/wineggx)
+[wineggx](https://github.com/MasutaniLab/wineggx)
 
 
 
