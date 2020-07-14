@@ -94,6 +94,15 @@ $ ./nihongo
 うまく表示されない場合は，truetypeフォントがうまくインストールされていないか，
 ./lib/fbeggx.hファイル中のDEFAULT_FONTの設定が正しくないので訂正します．
 
+## プログラムのコンパイル
+sample.cというソースコードがあった場合，次のようにコンパイルすることができます．
+```
+$ fbegg -o sample sample.c
+```
+また，次のようにコンパイルすることもできます．
+```
+$ gcc -o sample sample.c -I/usr/local/include -L/usr/local/lib -I/usr/include/freetype2 -lfbeggx -lfreetype -lm
+```
 
 
 ## 実装してある関数一覧
