@@ -1,0 +1,25 @@
+
+【注意事項】
+
+  fbeggx に付属の日本語テキストファイルとソースコードの文字コードは，
+  日本語 UTF-8 です．
+
+【収録されているドキュメント】
+
+  - README.ja (日本語テキスト)
+    fbeggx の紹介
+
+  - INSTALL.ja (日本語テキスト)
+    インストールの方法
+
+  - EXAMPLES.ja  (日本語テキスト)
+    サンプルプログラムについての情報
+
+  - LICENSE (英語テキスト)
+    ライセンス(GPL)
+
+  - eggx_procall.ja.pdf (日本語pdf)
+    日本語ユーザーズガイドです．
+    EGGX の関数の詳細についてはこの pdf をご覧ください．
+    https://www.ir.isas.jaxa.jp/~cyamauch/eggx_procall/index.ja.html
+    で配布されているものです．
