@@ -24,8 +24,8 @@ $ sudo apt install libfreetype6-dev
 
 ### ./lib/fbeggx.hファイル中のDEFAULT_FONTの書き換え
 ```
-  /* デフォルトのフォントファイル　*/
-  #define DEFAULT_FONT "/usr/share/fonts/truetype/fonts-japanese-gothic.ttf"
+/* デフォルトのフォントファイル　*/
+#define DEFAULT_FONT "/usr/share/fonts/truetype/fonts-japanese-gothic.ttf"
 ```
   フォントを指定しない場合のデフォルトのフォントとなります．
 
@@ -34,8 +34,8 @@ $ sudo apt install libfreetype6-dev
   　フレームバッファ・デバイスファイルは環境変数"FRAMEBUFFER"で指定することができます．
    デフォルトで使用するフレームバッファ・デバイスファイルを変更したい場合はfbeggx.hを書き換えます．
 ```
-  /* デフォルトのレームバッファ デバイスファイル名 */
-  #define DEFAULT_FRAMEBUFFER "/dev/fb0"
+/* デフォルトのレームバッファ デバイスファイル名 */
+#define DEFAULT_FRAMEBUFFER "/dev/fb0"
 ```
   の部分を書き換えてください．
 
@@ -54,16 +54,16 @@ FBEGGXのライブラリファイル，ヘッダファイルはデフォルト�
 
 ### make します．
 ```
-  $ make
+$ make
 ```
 ### fbegg , fbeggx*.h と libfbeggx.a をコピーします．
 
 root になれる場合，su で root になり，make install します．
 ```
-      $ su
-      $ make install
-      あるいは
-      $ sudo make install
+$ su
+# make install
+ あるいは
+$ sudo make install
 ```
 
 
@@ -71,28 +71,28 @@ root になれる場合，su で root になり，make install します．
 
 ターミナルから，次のようにしてください．
 ```
-      $ ./sample
+$ ./sample
 ```
 動作確認を兼ねたグラフィックスが表示されます．
   
 また，次のように実行すると
 ```
-      $ cd examples_tutorial
-      $ make clock
-      $ ./clock &
+$ cd examples_tutorial
+$ make clock
+$ ./clock &
 ```
 
 簡単なデジタル時計が現れれば，EGGX のビルドは成功です．
 
 さらに，基本的な日本語フォントが表示できるかを，次のようにテストします．
 ```
-      % cd examples.utf-8
-      % make nihongo
-      % ./nihongo
+$ cd examples.utf-8
+$ make nihongo
+$ ./nihongo
 ```
 14，16，24ドットで文字列が表示されればOKです．
-うまく表示されない場合は，truetypeフォントのインストールが不十分ですので
-フォントをインストールしてください．
+うまく表示されない場合は，truetypeフォントがうまくインストールされていないか，
+./lib/fbeggx.hファイル中のDEFAULT_FONTの設定が正しくないので訂正します．
 
 
 
