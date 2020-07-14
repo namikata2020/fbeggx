@@ -1,21 +1,18 @@
-=============================================================================
-               Easy and Gratifying Graphics library for frame buffer
-                       FBEGGX  version 0.93
-=============================================================================
+#FBEGGX  version 0.93
+Easy and Gratifying Graphics library for frame buffer
 
-●はじめに
+##はじめに
 
-　FBEGGXはEGGX / ProCALL互換のライブラリでLinuxのフレームバッファ上で動作するように
+　FBEGGXは[EGGX / ProCALL](http://www.ir.isas.jaxa.jp/~cyamauch/eggx_procall/)互換のライブラリでLinuxのフレームバッファ上で動作するように
 作成しました．X11が動作しない環境でもグラフィックスプログラムを作成することができます。
 
 大きな違いは次の3点ですが，EGGX / ProCALLの一部の機能をサポートしていません．
-○ウィンドウシステムが存在しないため，開けるウィンドウは1つだけです．
-○フォントはTrueTypeフォントを使用します．そのためint newfontset( int wn, const char *fontfile)
-　関数は引数にTrueTypeフォントそのものを指定します。
-○マウスのサポートはありません．
+-ウィンドウシステムが存在しないため，開けるウィンドウは1つだけです．
+-フォントはTrueTypeフォントを使用します．そのためint newfontset( int wn, const char *fontfile)関数は引数にTrueTypeフォントそのものを指定します。
+-マウスのサポートはありません．
 
 実装してある関数一覧
-
+```
 int gopen(int w,int h);
 void gclose(int win);
 void gcloseall(void);
@@ -106,57 +103,10 @@ int ggetdisplayinfo( int *rt_depth, int *root_width, int *root_height );
 void gsetinitialattributes( int values, int att_msk );
 int ggetinitialattributes( void );
 void gsetinitialbgcolor( const char *argsformat, ... );
+```
 
+EGGX/ProCALL   [Webページ](http://www.ir.isas.jaxa.jp/~cyamauch/eggx_procall/) [github](https://github.com/cyamauch/eggx)
+wineggx [github](https://github.com/MasutaniLab/wineggx)
 
-
-
-以下EGGX / ProCALLの解説です．
------------------------------------------------------------
-  EGGX / ProCALL は， 究極の簡単さを目指して作成した X11 グラフィックスライブ
-ラリです．懐かしの BASIC 風の関数で簡単に 2D グラフィックスを楽しむことができ
-ます．
-
-  このライブラリは，作り始めた頃(1999年頃)は「Pro-FORTRAN」と呼ばれる FORTRAN
-の API と互換だったので，「PROCALL」と呼んでいました．しかし，その後の拡張に
-よって C の関数は Pro-FORTRAN の原型をとどめていない状態になったので，
-
- - このライブラリの C の関数群 -> EGGX
- - このライブラリの FORTRAN サブルーチン群 -> ProCALL
-
-と呼ぶことにしました．
-
- 「EGG」とは Xlib の機能の一部を使っているという意味での「卵」と，プログラマ
-の「卵」であるビギナーの「絵を描きたい」「ゲームを作りたい」といった希望をか
-なえよう，という意味合いがあります．
-
-  EGGX の API を使うと，AfterStep や WindowMaker のアプレットが簡単に作成でき
-ます．examples_tutorial ディレクトリの plamoclock.c をご覧いただくとわかりま
-すが，デジタル時計程度のものであれば，わずか数十行で作れてしまいます．EGGX を
-使ってオリジナルのアプレットを作ってみるのも楽しいかもしれません．
-
-  EGGX/ProCALL が多くの「卵」を育てる道具になれば幸いです．
-
-
-●インストール方法・補助ツールについて
-
-  INSTALL.ja をご覧ください．
-
-
-●サンプルコード
-
-  EXAMPLES.ja をご覧ください．
-
-
-●マニュアル
-
-  pdf のユーザーズガイド eggx_procall.ja.pdf をご覧ください．簡単なチュートリ
-アルと関数の詳細な説明があります．
-
-  EGGX/ProCALL の Web ページ，
-
-  http://www.ir.isas.jaxa.jp/~cyamauch/eggx_procall/
-
-  にも同じマニュアルを置いています。
------------------------------------------------------------------
 
 
