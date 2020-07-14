@@ -4,7 +4,7 @@ Easy and Gratifying Graphics library for frame buffer
 ## はじめに
 
 　FBEGGXは[EGGX / ProCALL](http://www.ir.isas.jaxa.jp/~cyamauch/eggx_procall/)互換のライブラリでLinuxのフレームバッファ上で動作するように
-作成しました．X11が動作しない環境でもグラフィックスプログラムを作成することができます。
+作成しました．X11が動作しない環境でもグラフィックスプログラムを作成することができます．
 
 大きな違いは次の3点ですが，EGGX / ProCALLの一部の機能をサポートしていません．
 - ウィンドウシステムが存在しないため，開けるウィンドウは1つだけです．
