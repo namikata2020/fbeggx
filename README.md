@@ -13,14 +13,17 @@ Easy and Gratifying Graphics library for frame buffer
 
 ## インストール方法
 
-### TrueTypeフォントのインストールおよびlib/fbeggx.hファイルの編集
+### TrueTypeフォントのインストールおよびソースコードのダウンロード
 
 文字の表示はtruetypeフォントを使用します．1つのTruetypeフォントとfreetypeライブラリをインストールします．
 debian ubuntu系では，次のようにインストールします．
 ```
 $ sudo apt install fonts-ipafont
 $ sudo apt install libfreetype6-dev
+$ git clone https://github.com/namikata2020/fbeggx.git
+$ cd fbeggx
 ```
+### lib/fbeggx.hファイルの編集
 
 ### ./lib/fbeggx.hファイル中のDEFAULT_FONTの書き換え
 ```
