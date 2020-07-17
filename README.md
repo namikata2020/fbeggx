@@ -25,14 +25,14 @@ $ cd fbeggx
 ```
 ### lib/fbeggx.hファイルの編集
 
-### ./lib/fbeggx.hファイル中のDEFAULT_FONTの書き換え
+#### ./lib/fbeggx.hファイル中のDEFAULT_FONTの書き換え
 ```
 /* デフォルトのフォントファイル　*/
 #define DEFAULT_FONT "/usr/share/fonts/truetype/fonts-japanese-gothic.ttf"
 ```
   フォントを指定しない場合のデフォルトのフォントとなります．
 
-### フレームバッファデバイスを指定するための./lib/fbeggx.hファイルの編集
+#### フレームバッファデバイスを指定するための./lib/fbeggx.hファイルの編集
 
   　フレームバッファ・デバイスファイルは環境変数"FRAMEBUFFER"で指定することができます．
    デフォルトで使用するフレームバッファ・デバイスファイルを変更したい場合はfbeggx.hを書き換えます．
